@@ -1,0 +1,15 @@
+<mat-form-field appearance="outline" floatLabel="always">
+  <mat-label>{{label}}</mat-label>
+
+  <mat-chip-list style="display: none;">
+    <!-- workaround in order to use form field wrapper, radio group isn't supported -->
+  </mat-chip-list>
+
+  <mat-radio-group [(formControl)]="formControl" class="example-radio-group">
+    <mat-radio-button *ngFor="let item of items" [value]="item">
+      {{item.text}}
+    </mat-radio-button>
+  </mat-radio-group>
+
+
+</mat-form-field>

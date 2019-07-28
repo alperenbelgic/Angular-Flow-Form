@@ -1,0 +1,66 @@
+// notes:
+// in order to use *ngFor in a library project , [CommonModule] or [BrowserModule] need to be imported in NgModule
+// * entry components for consumed form item components
+// */
+
+/*
+todo:
+*/
+
+
+/**
+ name: angular flow form
+ technichal highlights:
+ * observable usage
+ * material flex usage
+ * html / css: display / position, relative vs
+ * angular animation
+
+ definition:
+ configurable input form composer with step flows by using a declerative approach
+ */
+
+/*
+waiting development:
+* validation by FormItem
+* integrated validation status with the widget and FormControl
+* better validation visualisation
+* support for a components wrapper with types provided to the form as generic type parameter
+* download icon font in the project
+* animation on error messages (expand the panel slowly)
+* different modes for step paths - especially for the cases when it gets many items
+* error handing for observables
+* when an individual FormItem is set to loading- only that item should be deactivated. sample case: you enter post code , it load addresses but if you entered a wrong address and want to change it you have to wait it to be completed.
+* consider removing formControls parameters in provided delegates as they can be accessible through compoenent.formControl
+*/
+
+
+/*
+done:
+* action validation
+* utilise FormControl valueChanges to update any component value upon a change ( how to combine two fields' changes? )
+  * sometimes, this may require, loading icon for both
+    * FormItem's view
+    * Step's actions
+  * above item  effectively requires, interrelated loading status
+    * if any FormItem is in loading state, the step must be in loading state
+    * if step is in loading state, action buttons must be in loading state
+    * components need to implement canloadable interface
+  * For component, maybe we can require this as well, with a variable name, you can communicate.
+* FormItem visibilites by values
+  * show and hide with animations
+  * integrated [inactive] status (component - flow) ??
+    * using FormControl for this?
+* show steps -
+    * show selected step with highlighted or something
+* a sample animation for the previous item
+* loading icons for step, form item and button.
+    * disable buttons if step is loading, for the running action, also show a running icon or something
+    * if any form item is loading, step should be deactive, if any component of a form item is loaidng, only that form item should be loading
+* introduce more input types
+* make sure load runs maximum one time per step
+* last page - add a text control to show the result
+* prevent last step from go back 
+*/
+
+

@@ -18,6 +18,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "angular-step-lib": [
+        "dist/angular-step-lib"
+      ],
+      "angular-step-lib/*": [
+        "dist/angular-step-lib/*"
+      ]
+    }
   }
 }
