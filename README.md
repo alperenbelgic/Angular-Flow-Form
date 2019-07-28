@@ -4,7 +4,10 @@ A configurable input form composer with step flows by using a declerative approa
 
 This repo contains a reference application and the actual source code of the library.
 
+run 'npm install' to install npm dependencies.
+
 run 'ng build angular-step-lib' to build the library.
+
 then run 'ng serve' to run the reference project which uses the library.
 
 navigate to `http://localhost:4200/` and you will view the reference project.
