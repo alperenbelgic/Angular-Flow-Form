@@ -3,5 +3,12 @@
   "dest": "../../dist/angular-step-lib",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": [
+    "@angular/material",
+    "@angular/animations",
+    "@angular/forms",
+    "@angular/flex-layout",
+    "@angular/cdk"
+  ]
 }
