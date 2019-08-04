@@ -15,11 +15,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   imports: [
     CommonModule,
     BrowserAnimationsModule,
-    FlexLayoutModule,
-    MatButtonModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatProgressSpinnerModule],
+    FlexLayoutModule
+  ],
   exports: [AngularStepLibComponent]
 })
 export class AngularStepLibModule { }

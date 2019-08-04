@@ -1,6 +1,6 @@
 {
   "name": "angular-flow-form",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A configurable input form composer with step flows by using a declerative approach.",
   "author": "Alperen Belgic",
   "repository": {

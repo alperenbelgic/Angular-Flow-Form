@@ -9,13 +9,13 @@
   <button [@visibility]="form.backButtonVisible" [disabled]="form.backButtonActive ? null : true"
     (click)="form.goBack()" class="back-button">
     <div class="back-button-wrapper">
-      <mat-icon matSuffix>arrow_back</mat-icon>
+      <div class="back-button-icon"></div>
     </div>
   </button>
   <div class="step-ui step-loading" *ngIf="form.currentStep"
     [style.display]="form.currentStep.isLoading ? 'block' : 'none' ">
-    <div class="step-loading-spinner" fxLayout="row" fxLayoutAlign="center center">
-      <mat-spinner></mat-spinner>
+    <div class="step-loading-spinner-wrapper" fxLayout="row" fxLayoutAlign="center center">
+      <div class="step-loading-spinner"></div>
     </div>
     <div class="step-loading-inner"></div>
   </div>
@@ -42,9 +42,9 @@
     </div>
     <div *ngIf="form.isInitialised" class="action-buttons-wrapper" fxLayout="row" fxLayoutAlign="end none">
       <div *ngFor="let action of step.actions">
-        <div *ngIf="action.isVisibleFuncInternal" >
-          <button class="action-button" mat-raised-button (click)="action.actionFuncInternal()"
-            [disabled]="action.canClick ? null : true" color="primary">
+        <div *ngIf="action.isVisibleFuncInternal">
+          <button class="action-button" (click)="action.actionFuncInternal()" [disabled]="action.canClick ? null : true"
+            [ngClass]="(action.canClick ==true)?'action-button-active':'action-button-disabled'">
             {{action.buttonText}}
           </button>
         </div>
